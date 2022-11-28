@@ -7,15 +7,34 @@ struct Person {
     likes_tomatoes: bool,
 }
 
+// a function that builds persons. It returns a Person instance
+fn build_person(id: u8, name: String, email: String, likes_tomatoes: bool) -> Person {
+    Person {
+        id: id,
+        name: name,
+        email: email,
+        likes_tomatoes: likes_tomatoes,
+    }
+}
 
 fn main() {
 
     let mut john = Person { 
-                        id: 86,
-                        name: String::from("John"),
-                        email: String::from("Johnathan@somemail.com"),
-                        likes_tomatoes: true,
+
+        id: 86,
+        name: String::from("John"),
+        email: String::from("Johnathan@somemail.com"),
+        likes_tomatoes: true,
     };
+
+    // _variable = ill not use this!
+    let _johnson = build_person(
+
+        87,
+        String::from("Johnson"),
+        String::from("Johnson@email.com"),
+        true
+    );
 
     println!("{} email is {} ..", john.name, john.email);
 
