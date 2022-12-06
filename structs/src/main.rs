@@ -1,5 +1,4 @@
 /*structs are a custom datatype that packages meaningful values*/
-
 struct Person {
     id: u8,
     name: String,
@@ -7,13 +6,19 @@ struct Person {
     likes_tomatoes: bool,
 }
 
-// a function that builds persons. It returns a Person instance
 fn build_person(id: u8, name: String, email: String, likes_tomatoes: bool) -> Person {
     Person {
         id: id,
         name: name,
         email: email,
         likes_tomatoes: likes_tomatoes,
+    }
+}
+
+// Method Syntax
+impl Person {
+    fn get_name(&self) -> String {
+        self.name.to_string()
     }
 }
 
@@ -43,6 +48,7 @@ fn main() {
 
     println!(".. now {} email is {} ..", john.name, john.email);
     println!(".. {} likes tomatoes? {}! his id is {} by the way ..", john.name, john.likes_tomatoes, john.id);
+    println!(" John name by method syntax: {}", john.get_name());
  
 }
 
