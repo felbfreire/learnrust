@@ -1,6 +1,5 @@
-// This is a project from The Rust Progt=ramming language book !
+// This is a project from The Rust Programming language book !
 //
-
 
 use std::env;
 use std::process;
